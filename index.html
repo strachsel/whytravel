@@ -9,11 +9,26 @@
     <div class="hCon" ng-controller="HeadController">
       <h1 class="header">Why Travel to...</h1>
       <h2 class="subheader">{{ country }}</h2>
-      <h3> {{ currency | currency }} </h3>
+      <h3> Currency: {{ currency }} // Language: {{ language }}</h3>
+      <p>
+        {{ about }}
+      </p>
     </div>
+    <div ng-controller="UberController"> Uber Ride: {{ price | currency:undefined:0 }} </div>
+    <div ng-controller="AirBnbController"> AirBnb Day Rent: {{ price | currency:undefined:0}} </div>
+    <div ng-controller="BarController"> Bar Drink: {{ price | currency:undefined:0 }} </div>
+    <div ng-controller="DinnerController"> Fancy Dinner: {{ price | currency:undefined:0 }} </div>
+    <div ng-controller="MuseumController"> Museum Pass: {{ price | currency:undefined:0 }} </div>
+    <div ng-controller="SubwayController"> Subway Ticket: {{ price | currency:undefined:0 }} </div>
 
   </body>
   <script src="vendors/angular.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/controllers/MainController.js"></script>
+  <script src="js/controllers/AirBnbController.js"></script>
+  <script src="js/controllers/UberController.js"></script>
+  <script src="js/controllers/BarController.js"></script>
+  <script src="js/controllers/DinnerController.js"></script>
+  <script src="js/controllers/MuseumController.js"></script>
+  <script src="js/controllers/SubwayController.js"></script>
 </html>
