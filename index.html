@@ -1,0 +1,19 @@
+<!DOCTYPE>
+
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body ng-app="myApp">
+
+    <div class="hCon" ng-controller="HeadController">
+      <h1 class="header">Why Travel to...</h1>
+      <h2 class="subheader">{{ country }}</h2>
+      <h3> {{ currency | currency }} </h3>
+    </div>
+
+  </body>
+  <script src="vendors/angular.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers/MainController.js"></script>
+</html>
