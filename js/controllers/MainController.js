@@ -1,4 +1,4 @@
-myApp.controller('HeadController', ['$scope', function($scope) {
+myApp.controller('MainController', ['$scope', function($scope) {
   $scope.country = 'Russia';
   $scope.currency = 'Rubles';
   $scope.language = 'Russian';
