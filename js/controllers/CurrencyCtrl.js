@@ -1,5 +1,5 @@
 myApp.controller('CurrencyCtrl', function($scope) {
-    $scope.money = 75;
+    $scope.money = 72;
     $scope.uber = 700;
     $scope.airbnb = 3500;
     $scope.bar = 500;

@@ -35,7 +35,7 @@
     </div>
     <div ng-controller="CurrencyCtrl">
       <p>
-        you have, {{money | currency}} (rubles) ... that means you have {{money  | currency:'$'}} (dollars)!
+        you have, {{money | currency}} (rubles) ... that means you have {{money  | noFractionCurrency:'$'}} (dollars)!
       </p>
       <p> Uber Ride: {{ uber | currency: '$' }} </p>
       <p>AirBnb Day Rent: {{ airbnb | currency: '$'}}</p>
