@@ -1,0 +1,106 @@
+/* ---- FOOTER ---- */
+
+.subheader {
+  text-transform: uppercase;
+}
+.tCon p {
+  font-size: 1.3em;
+  max-width: 500px;
+  margin: auto;
+  padding: 50px 0;
+}
+
+.image img{
+  max-width: 200px;
+}
+
+.transparent-circle {
+    background-color: rgba(204, 0, 102, 0);
+    border: 3px solid #fff;
+    height:150px;
+    width:150px;
+    -webkit-border-radius:400px;
+    -moz-border-radius:400px;
+}
+
+.cost {
+  display: block;
+  max-width: 100%;
+}
+
+.main .uber{
+  position: absolute;
+  top: 450px;
+  left: 150px;
+}
+
+.main .airbnb{
+  position: absolute;
+  top: 450px;
+  left: 950px;
+}
+
+.main .bar{
+  position: absolute;
+  top: 650px;
+  left: 150px;
+}
+
+.main .dinner{
+  position: absolute;
+  top: 650px;
+  left: 950px;
+}
+
+.main .museum{
+  position: absolute;
+  top: 950px;
+  left: 150px;
+}
+
+.main .subway{
+  position: absolute;
+  top: 950px;
+  left: 950px;
+}
+
+/* ---- FOOTER ---- */
+
+#footer-content {
+  color: #f3f3f3;
+  padding: 35px;
+}
+
+#footer-content a {
+  text-decoration: underline;
+  margin: 20px;
+  font-size: 1.5em;
+  color: #f3f3f3;
+  font-family: 'Andika', sans-serif;
+  text-transform: capitalize;
+}
+
+#copyright h5 {
+  font-weight: normal;
+  float: right;
+  margin: 10px;
+}
+
+#footer-nav {
+  padding: 10px;
+  display: block;
+  float: left;
+  position: absolute;
+}
+
+#footer-content li {
+    float: left;
+  margin: 20px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  display: inline;
+}
+
+#footer-content h3 {
+  float: right;
+}
