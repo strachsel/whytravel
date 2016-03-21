@@ -2,6 +2,7 @@ myApp.controller('ForecastCtrl', ['$scope', 'forecast', function($scope, forecas
   function fetchWeather(id) {
          forecast.getWeather(id).then(function(data){
            $scope.place = data;
+           console.log($scope.place);
          });
        }
 
