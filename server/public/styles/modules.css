@@ -1,170 +1,141 @@
-/* ---- HEADER ---- */
+/* ---- MAIN ---- */
 
 .subheader {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
 .tCon p {
     font-size: 1.8em;
     max-width: 700px;
     margin: auto;
-    padding: 150px 0;
+    padding: 150px 10px;
 }
-
-.image img{
+.image img {
     max-width: 200px;
 }
-
 .transparent-circle {
     background-color: rgba(204, 0, 102, 0);
     border: 3px solid #fff;
-    height:150px;
-    width:150px;
-    -webkit-border-radius:400px;
-    -moz-border-radius:400px;
+    height: 150px;
+    width: 150px;
+    -webkit-border-radius: 400px;
+    -moz-border-radius: 400px;
 }
-
 .cost {
-  display: block;
-  max-width: 100%;
+    display: block;
+    max-width: 100%;
 }
-
 .main .cost {
-  position: relative;
-  max-width: 100%;
+    position: relative;
+    max-width: 100%;
 }
-
-/* ---- WEATHER ---- */
-
-/*.cost {
-  border: solid;
-  border-style: double;
-  border-width: 1.3px;
-  border-color: #eddaa6;
-  border-radius: 10px;
-}*/
-
+.btn-1 {
+    padding: 25px 80px;
+    margin: 15px auto;
+    max-width: 50%;
+    letter-spacing: 2px;
+    border-radius: 50px;
+    border: 3px solid #fff;
+    color: #fff;
+    overflow: hidden;
+}
+.cCon p {
+    font-size: 1.8em;
+    max-width: 700px;
+    margin: auto;
+    padding: 20px 10px;
+}
 /* ---- WEATHER ---- */
 
 .weather {
-  margin: auto;
-  position: relative;
-  max-width: 100%;
+    margin: auto;
+    position: relative;
+    max-width: 100%;
 }
-
 .wcontent {
-  position: absolute;
-  top: 300px;
-  left: 0;
-  width: 100%;
+    width: 100%;
 }
-
+.weather > div {
+    position: absolute;
+    top: 300px;
+    left: 0;
+}
 #cloud {
-  margin: 200px 0;
-  width: 800px;
-  position: relative;
-  max-width: 100%;
+    fill: #fff;
+    margin: 200px 0;
+    width: 550px;
+    position: relative;
+    max-width: 100%;
 }
 .weather p {
-  font-size: 1.3em;
+    color: #eddaa6;
+    font-size: 2em;
+    letter-spacing: 1px;
 }
-/*
-.cost .uber{
-  position: absolute;
-  top: 450px;
-  left: 150px;
-}
-
-.cost .airbnb{
-  position: absolute;
-  top: 450px;
-  left: 950px;
-}
-
-.cost .bar{
-  position: absolute;
-  top: 650px;
-  left: 150px;
-}
-
-.cost .dinner{
-  position: absolute;
-  top: 650px;
-  left: 950px;
-}
-
-.cost .museum{
-  position: absolute;
-  top: 950px;
-  left: 150px;
-}
-
-.cost .subway{
-  position: absolute;
-  top: 950px;
-  left: 950px;
-}*/
-
-@media only screen and (max-width: 753px) {
-  .cost {
-    margin: 0;
-  }
-  .wcontent {
-    margin: 0 0 100px;
-  }
-  #cloud {
-    display: none;
-  }
-}
-
-
 /* ---- FOOTER ---- */
 
 footer {
-  color: #fff;
-  padding-top: 20px;
-  border-top: solid;
-  border-width: 3px;
-  border-top-style: dashed;
-}
+    position: absolute;
+    color: #fff;
+    width: 100%;
+    /* padding-top: 20px; */
 
-/*#copyright {
-  float: right;
-}*/
+    border-top: solid;
+    border-width: 3px;
+    /*border-top-style: dashed;*/
+
+    background: #eddaa6;
+}
+#copyright h3 {
+    font-size: 1em;
+    font-weight: normal;
+    float: right;
+    margin: -40px 10px 20px;
+}
 #footer-content {
-  color: #f3f3f3;
-  padding: 35px;
+    color: #f3f3f3;
+    padding: 0;
 }
-
 #footer-content a {
-  text-decoration: underline;
-  margin: 20px;
-  font-size: 1.5em;
-  color: #f3f3f3;
-  font-family: 'Andika', sans-serif;
-  text-transform: capitalize;
+    font-size: 1.5em;
+    color: #f3f3f3;
+    font-family: 'PT Sans', sans-serif;
 }
-
-#copyright h5 {
-  font-weight: normal;
-  float: right;
-  margin: 10px;
-}
-
-#footer-nav {
-  padding: 10px;
-  display: block;
-  float: left;
-  position: absolute;
-}
-
 #footer-content li {
-    float: left;
-  margin: 20px;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  display: inline;
+    text-decoration: none;
+    margin: 20px;
+    text-transform: uppercase;
+    display: inline;
 }
+#footer-nav {
+    padding: 10px;
+    display: block;
+    float: left;
+    position: absolute;
+}
+/* ---- MEDIA ---- */
 
-#footer-content h3 {
-  float: right;
+@media only screen and (max-width: 776px) {
+    #copyright h3 {
+        margin: 20px !important;
+        float: none !important;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .btn-1 {
+      font-size: 1.2em;
+    }
+    .cost {
+        margin: 0;
+    }
+    .wcontent {
+        margin: 0 0 100px;
+    }
+    .wcontent p {
+        font-size: 1.5em !important;
+    }
+    .weather > div {
+        position: absolute;
+        top: 280px;
+        left: 0;
+    }
 }
