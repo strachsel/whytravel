@@ -1,17 +1,17 @@
-/* ---- FOOTER ---- */
+/* ---- HEADER ---- */
 
 .subheader {
   text-transform: uppercase;
 }
 .tCon p {
-  font-size: 1.3em;
-  max-width: 500px;
-  margin: auto;
-  padding: 50px 0;
+    font-size: 1.8em;
+    max-width: 700px;
+    margin: auto;
+    padding: 150px 0;
 }
 
 .image img{
-  max-width: 200px;
+    max-width: 200px;
 }
 
 .transparent-circle {
@@ -28,44 +28,108 @@
   max-width: 100%;
 }
 
-.main .uber{
+.main .cost {
+  position: relative;
+  max-width: 100%;
+}
+
+/* ---- WEATHER ---- */
+
+/*.cost {
+  border: solid;
+  border-style: double;
+  border-width: 1.3px;
+  border-color: #eddaa6;
+  border-radius: 10px;
+}*/
+
+/* ---- WEATHER ---- */
+
+.weather {
+  margin: auto;
+  position: relative;
+  max-width: 100%;
+}
+
+.wcontent {
+  position: absolute;
+  top: 300px;
+  left: 0;
+  width: 100%;
+}
+
+#cloud {
+  margin: 200px 0;
+  width: 800px;
+  position: relative;
+  max-width: 100%;
+}
+.weather p {
+  font-size: 1.3em;
+}
+/*
+.cost .uber{
   position: absolute;
   top: 450px;
   left: 150px;
 }
 
-.main .airbnb{
+.cost .airbnb{
   position: absolute;
   top: 450px;
   left: 950px;
 }
 
-.main .bar{
+.cost .bar{
   position: absolute;
   top: 650px;
   left: 150px;
 }
 
-.main .dinner{
+.cost .dinner{
   position: absolute;
   top: 650px;
   left: 950px;
 }
 
-.main .museum{
+.cost .museum{
   position: absolute;
   top: 950px;
   left: 150px;
 }
 
-.main .subway{
+.cost .subway{
   position: absolute;
   top: 950px;
   left: 950px;
+}*/
+
+@media only screen and (max-width: 753px) {
+  .cost {
+    margin: 0;
+  }
+  .wcontent {
+    margin: 0 0 100px;
+  }
+  #cloud {
+    display: none;
+  }
 }
+
 
 /* ---- FOOTER ---- */
 
+footer {
+  color: #fff;
+  padding-top: 20px;
+  border-top: solid;
+  border-width: 3px;
+  border-top-style: dashed;
+}
+
+/*#copyright {
+  float: right;
+}*/
 #footer-content {
   color: #f3f3f3;
   padding: 35px;

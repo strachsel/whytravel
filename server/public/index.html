@@ -6,28 +6,48 @@
     <title>Why Travel to Russia</title>
     <meta name="description" content="Why you should travel to Russia."/>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/base.css">
     <!-- <link rel="stylesheet" href="styles/layout.css"> -->
     <link rel="stylesheet" href="styles/modules.css">
     <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Londrina+Outline' rel='stylesheet' type='text/css'>
     <script src="vendors/angular.min.js"></script>
+    <script src="vendors/jquery-1.12.2.min.js"></script>
+    <script src="http://code.jquery.com/color/jquery.color-2.1.0.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers/MainController.js"></script>
     <script src="js/controllers/ForecastCtrl.js"></script>
     <script src="js/services/forecast.js"></script>
     <script src="js/services/exchange.js"></script>
+    <script src="js/scrolling.js"></script>
 </head>
 
 <body ng-app="myApp">
   <div class="main">
-    <div ng-controller="curCtrl" class="cost">
+      <div ng-controller="MainController">
+          <div class="hCon">
+              <!-- <img src="img/gif.gif"> -->
+              <h1 class="header">Why Travel to...</h1>
+              <h2 class="subheader">{{ country }}</h2>
+              <h3> Currency: {{ currency }} // Language: {{ language }}</h3>
+          </div>
+          <div class="image">
+            <img src="img/rocket.png">
+          </div>
+          <div class="tCon">
+              <p>
+                  {{ about }}
+              </p>
+          </div>
+      </div>
+    </div>
+    <div ng-controller="curCtrl">
         <!-- <h4>
         you have, {{money | currency}} (rubles) ... that means you have {{money  | noFractionCurrency:'$'}} (dollars)!
       </h4> -->
+      <div class="cost">
         <div class="top">
-          <h4>{{exchange.query.results.rate.Rate}}</h4>
           <h4 class="uber">Uber Ride: {{ uber / exchange.query.results.rate.Rate | noFractionCurrency }} </h4>
           <h5 class="airbnb">AirBnb Day Rent: {{ airbnb / exchange.query.results.rate.Rate | currency }}</h5>
         </div>
@@ -39,31 +59,17 @@
           <h4 class="museum">Museum Pass: {{ museum / exchange.query.results.rate.Rate | currency  }}</h4>
           <h5 class="subway">Subway Ticket: {{ subway / exchange.query.results.rate.Rate | currency }}</h5>
         </div>
-    </div>
-    <div ng-controller="MainController">
-        <div class="hCon">
-            <h1 class="header">Why Travel to...</h1>
-            <h2 class="subheader">{{ country }}</h2>
-            <h3> Currency: {{ currency }} // Language: {{ language }}</h3>
-        </div>
-        <div class="image">
-          <img src="img/rocket.png">
-        </div>
-        <div class="tCon">
-            <p>
-                {{ about }}
-            </p>
-        </div>
-    </div>
+      </div>
     </div>
     <div ng-controller="ForecastCtrl">
-        <div>
-            <div id="cloud"><span class='shadow'></span>
+        <div class="weather">
+            <img id="cloud" src="img/cloud.png">
+            <div class="wcontent">
+              <p>City: {{place.location.city}} </p>
+              <p><strong>{{ place.item.condition.date }}</strong> </p>
+              <p>{{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg; <img src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif" />
+              </p>
             </div>
-            <p>City: {{place.location.city}} </p>
-            <p>Today: <strong>{{ place.item.condition.date }}</strong> </p>
-            <p>Weather: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg; <img src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif" />
-            </p>
             <!-- <div ng-repeat="forecast in place.item.forecast">
            <p><strong>{{ forecast.date }}</strong> – {{ forecast.text }}</p>
            <p>H: {{ forecast.high }}&deg; | L: {{ forecast.low }}&deg;</p>
@@ -75,6 +81,17 @@
     <div id="about" style="display:none">
 
     </div>
+
+
+    <footer>
+      <!-- <ul>
+        <li><a href="https://github.com/strachsel/"><i class="fa fa-github"></i></a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/github">Github</a></li>
+      </ul> -->
+      <h3 id="copyright">Copyright 2016 Sonya Trachsel ©</h3>
+    </footer>
     <!-- <footer>
       <div id="footer-content">
       <div id="copyright">

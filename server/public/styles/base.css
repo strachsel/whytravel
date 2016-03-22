@@ -8,6 +8,7 @@ p {
 }
 
 body {
+    min-height: 2000px;
     text-align: center;
     background-color: #324149;
 }
@@ -40,8 +41,4 @@ h5 {
     text-transform: uppercase;
     font-size: 1.5em;
     color: #eddaa6;
-}
-
-@media max-width: 600px {
-
 }
